@@ -82,7 +82,7 @@ body {
     font-size: 4em;
     color: var(--color-text-dark);
     bottom: 10px;
-    left: 40%;
+    left: 24%;
     position: absolute;
     animation: fadeIn 0.8s ease forwards;
     opacity: 0;
