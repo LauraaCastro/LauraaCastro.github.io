@@ -1,0 +1,469 @@
+/* CSS */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Festive&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+/* Importar el nuevo archivo de estilos del sidebar */
+@import url('/path/to/sidebar-menu.css');
+
+:root {
+    --color-background-1: #ff758c;
+    --color-background-2: #ff7eb3;
+    --color-background-3: #a18cd1;
+    --color-background-4: #6247aa;
+    --color-text-white: white;
+    --color-text-dark: #542731;
+    --color-button-border: white;
+    --color-button-hover: #a18cd1;
+    --color-image-border: rgba(255, 255, 255, 0.5);
+    --color-barra-left: #C4B29F;
+}
+
+* {
+    font-family: 'Julius Sans One', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: linear-gradient(135deg, var(--color-background-1), var(--color-background-2), var(--color-background-3), var(--color-background-4));
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.container {
+    display: flex;
+    width: 90%;
+    height: 90vh;
+    padding: 20px 20% 0 0;
+    flex-direction: column;
+    align-items: center;
+}
+
+#titulo-section {
+    position: relative;
+    padding: 20px 70px 20px 50px;
+    border: solid 6px var(--color-text-white);
+}
+#titulo-section h1{
+    font-size: 5rem;
+    color: var(--color-text-white);
+}
+#galeria{
+    margin-top: 20px;
+}
+#botones-galeria{
+    margin-top: 20px;
+}
+#botones-galeria button{
+    font-weight: bold;
+    width: 45px;
+    color: var(--color-text-white);
+    padding: 10px;
+    margin: 5px;
+    border: solid 5px var(--color-text-white);
+    background-color: transparent;
+}
+#botones-galeria button:hover{
+    font-weight: bold;
+    border-radius: 10px;
+    width: 45px;
+    color: var(--color-barra-left);
+    padding: 10px;
+    margin: 5px;
+    border: solid 5px var(--color-barra-left);
+    background-color: transparent;
+}
+#botones-galeria .button-fake {
+    font-weight: bold;
+    width: 45px;
+    color: var(--color-text-white);
+    padding: 10px 15px;
+    margin: 5px;
+    border: solid 5px var(--color-text-white);
+    background-color: transparent;
+    margin: 0 5px;
+}
+
+.left-section {
+    width: 60%;
+    padding: 20px;
+}
+.header {
+    text-align: left;
+    position: relative;
+}
+.header h1 {
+    font-size: 11em;
+    color: var(--color-text-white);
+    line-height: 80%;
+    background: linear-gradient(
+        90deg,
+        rgba(196, 178, 159, 1) 0%,
+        rgba(255, 255, 255, 1) 100%
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+}
+.header h2 {
+    margin-left: 10px;
+    font-size: 2.5em;
+    color: var(--color-text-white);
+    background: linear-gradient(
+        90deg,
+        rgba(196, 178, 159, 1) 0%,
+        rgba(255, 255, 255, 1) 100%
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+}
+.fancy-text {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4em;
+    color: var(--color-text-dark);
+    bottom: 10px;
+    left: 40%;
+    position: absolute;
+}
+.fancy-text-makeup{
+    font-family: 'Great Vibes', cursive;
+    font-size: 4em;
+    color: var(--color-text-dark);
+    bottom: -30px;
+    left: 50%;
+    position: absolute;
+}
+.description {
+    margin-top: 10px;
+    font-size: 1.7em;
+    color: var(--color-text-white);
+}
+.image-section {
+    display: flex;
+    gap: 20px;
+    margin-top: 20%;
+}
+
+.right-section {
+    width: 40%;
+    background: var(--color-sidebar-background);
+    border-radius: 10px;
+    margin-left: 20px;
+}
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+    padding-left: 80px;
+}
+.main-content h1 {
+    font-size: 3em;
+    font-weight: 700;
+    color: #eac7d1;
+    font-family: 'Julius Sans One', sans-serif;
+}
+.main-content p {
+    font-size: 1.2em;
+    font-style: italic;
+    max-width: 500px;
+}
+.button {
+    background: transparent;
+    border: 2px solid var(--color-button-border);
+    color: var(--color-button-border);
+    padding: 12px 24px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+.button:hover {
+    background: var(--color-button-border);
+    color: var(--color-button-hover);
+}
+.glitter {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0;
+    animation: sparkle 2s infinite ease-in-out;
+    z-index: -1;
+}
+@keyframes sparkle {
+    0%, 100% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+/* Estilo de imágenes y secciones */
+.image-box {
+    width: 380px;
+    height: auto;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    border: 3px solid var(--color-image-border);
+    transition: transform 0.3s ease, padding 0.3s ease;
+    padding: 0;
+    margin: 10px;
+}
+.image-box:hover {
+    border: 5px solid var(--color-button-border);
+    width: 385px;
+    height: 254px;
+    transform: scale(1.05);
+    padding: 4px;
+    border-radius: 20px;
+}
+
+.image-box img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px;
+    position: relative;
+    z-index: 1;
+}
+.image-box span {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 2.4em;
+    font-family: "Festive", cursive;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.barra-left{
+    width: 10px;
+    background-color: var(--color-barra-left);
+    height: 80ch;
+    margin-left: 30px;
+}
+
+.logo-right img{
+    border-radius: 50%;
+}
+
+/*---nav texto nombre------*/
+.header-right {
+    text-align: left;
+    position: relative;
+    margin-bottom: 40px;
+}
+.header-right h1 {
+    font-size: 4em;
+    color: white;
+    line-height: 80%;
+    background: linear-gradient(
+        90deg,
+        rgba(196, 178, 159, 1) 0%,
+        rgba(255, 255, 255, 1) 100%
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+}
+.header-right h2 {
+    margin-left: 10px;
+    font-size: 1.5em;
+    color: white;
+    background: linear-gradient(
+        90deg,
+        rgba(196, 178, 159, 1) 0%,
+        rgba(255, 255, 255, 1) 100%
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+}
+.fancy-text-right {
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.3em;
+    color: #ffffff;
+    bottom: -10px;
+    left: 51%;
+    position: absolute;
+}
+
+
+
+.tags {
+    font-size: 0.9em;
+    color: var(--color-text-dark);
+    margin-top: 5px;
+}
+
+#galeria-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    max-width: 960px; /* Ancho máximo del contenedor */
+}
+
+.card {
+    width: calc(50% - 20px); /* Ancho de la tarjeta para 2 por fila, restando margen */
+    min-width: 400px; /* Ancho mínimo de 400px */
+    height: 250px; /* Aumentar el alto de la tarjeta */
+    border-radius: 10px;
+    margin: 10px; /* Margen entre tarjetas */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: flex-end; /* Alinear contenido al fondo */
+    color: white; /* Color del texto */
+    cursor: pointer; /* Cambiar el cursor a mano al hacer hover */
+}
+
+.card:hover {
+    border: 2px solid white; /* Borde blanco de 2px */
+    filter: brightness(0.8); /* Oscurecer la imagen */
+}
+
+.card-content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 0 10px 10px 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover .card-content {
+    opacity: 1; /* Mostrar al hacer hover */
+}
+
+.descripcion {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.tags {
+    font-size: 0.9em;
+}
+
+/* Estilos para el popup */
+.popup {
+    display: flex;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Alinear contenido verticalmente */
+}
+
+.popup-content {
+    max-width: 90%;
+    max-height: 80%;
+    cursor: pointer; /* Cambiar el cursor al pasar sobre la imagen */
+}
+
+.popup-description {
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.2em; /* Aumentar el tamaño de la fuente */
+}
+
+.popup-tags {
+    color: white;
+    text-align: center;
+    margin-top: 5px;
+    font-size: 1em; /* Tamaño de fuente para los tags */
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.menu-icon {
+    display: none; /* Ocultar por defecto */
+    z-index: 2000; /* Aumentar el z-index para que esté por encima del sidebar */
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block; /* Mostrar en pantallas pequeñas */
+    }
+    .sidebar {
+        display: none; /* Ocultar el menú por defecto */
+    }
+}
+
+/* Sidebar */
+.sidebar {
+    display: block !important; /* Mostrar por defecto en pantallas grandes */
+    position: fixed; /* Fijar el menú a la pantalla */
+    right: 0; /* Alinear a la derecha */
+    top: 0; /* Alinear a la parte superior */
+    width: 250px; /* Ancho del menú */
+    height: 100%; /* Altura completa */
+    background-color: white; /* Color de fondo del menú */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5); /* Sombra para el menú */
+    z-index: 1000; /* Asegurarse de que esté por encima de otros elementos */
+}
+
+/* Media queries */
+@media (max-width: 1190px) {
+    .sidebar {
+        display: none !important; /* Ocultar el menú en pantallas pequeñas */
+    }
+    .menu-icon {
+        display: block !important; /* Mostrar el ícono del menú en pantallas pequeñas */
+        position: absolute !important; /* Posicionar el ícono de manera absoluta */
+        top: 20px !important; /* Espaciado desde la parte superior */
+        right: 20px !important; /* Espaciado desde la derecha */
+        font-size: 2em !important; /* Tamaño del ícono */
+        color: white !important; /* Color del ícono */
+        cursor: pointer !important; /* Cambiar el cursor al pasar sobre el ícono */
+        z-index: 3000 !important; /* Asegurar que el ícono esté por encima de otros elementos */
+    }
+
+}
+@media (min-width: 1190px) {
+    .container {
+    display: flex;
+    width: 90%;
+    height: 90vh;
+    padding: 20px 20% 0 0 !important;
+    flex-direction: column;
+    align-items: center;
+}
+.sidebar.right{
+    display: flex;
+}
+}
+
+
+@media (max-width: 768px) {
+    .card {
+        width: calc(100% - 20px); /* Ancho completo en pantallas pequeñas */
+        height: 200px; /* Alto de la tarjeta */
+    }
+}

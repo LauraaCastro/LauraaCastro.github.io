@@ -1,0 +1,47 @@
+[
+    {
+        "src": "/src/manicura.png",
+        "descripcion": "Descripción de la imagen 1",
+        "tags": ["tag1", "tag2"]
+    },
+    {
+        "src": "/src/manicura.png",
+        "descripcion": "Descripción de la imagen 2",
+        "tags": ["tag3", "tag4"]
+    },
+    {
+        "src": "/src/manicura.png",
+        "descripcion": "Descripción de la imagen 3",
+        "tags": ["tag5", "tag6"]
+    },
+    {
+        "src": "/src/manicura.png",
+        "descripcion": "Descripción de la imagen 3",
+        "tags": ["tag5", "tag6"]
+    },
+    {
+        "src": "/src/manicura.png",
+        "descripcion": "Descripción de la imagen 3",
+        "tags": ["tag5", "tag6"]
+    },
+    {
+        "src": "/src/manicura.png",
+        "descripcion": "Descripción de la imagen 3",
+        "tags": ["tag5", "tag6"]
+    },
+    {
+        "src": "/src/manicura.png",
+        "descripcion": "Descripción de la imagen 3",
+        "tags": ["tag5", "tag6"]
+    },
+    {
+        "src": "/src/manicura.png",
+        "descripcion": "Descripción de la imagen 3",
+        "tags": ["tag5", "tag6"]
+    },
+    {
+        "src": "/src/manicura.png",
+        "descripcion": "Descripción de la imagen 3",
+        "tags": ["tag5", "tag6"]
+    }
+]

@@ -1,0 +1,102 @@
+:root {
+    --color-sidebar-background: rgba(85, 39, 48, 0.8);
+    --color-text-white: white;
+    --color-barra-left: #C4B29F;
+}
+#nav-parte-inferior {
+    margin-top: auto !important;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#nav-parte-inferior a {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.sidebar.right {
+    width: 400px;
+    background: var(--color-sidebar-background);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 0;
+    border-radius: 20px 0 0 20px;
+    order: 2;
+    height: 80ch;
+}
+
+.sidebar img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.btn-selecionado {
+    border: solid 2px var(--color-barra-left) !important;
+    margin: 8px 0 !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: var(--color-barra-left) !important;
+}
+
+.sidebar a {
+    font-size: 1.3rem;
+    color: var(--color-text-white);
+    text-decoration: none;
+    margin: 10px 0;
+    background-color: var(--color-barra-left);
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.sidebar a img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.sidebar a:hover {
+    border: solid 2px #ffffff;
+    margin: 8px 0;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 1190px) {
+    .sidebar {
+        position: fixed; /* Fijar la barra lateral */
+        right: -400px; /* Ocultar inicialmente */
+        transition: right 0.3s; /* Transición suave */
+    }
+
+    .sidebar.active {
+        right: 0; /* Mostrar barra lateral */
+    }
+
+    .menu-icon {
+        display: block; /* Mostrar ícono de menú */
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 2em; /* Tamaño del ícono */
+        color: white; /* Cambiar color del ícono a blanco */
+        cursor: pointer; /* Cambiar cursor */
+        z-index: 1000; /* Asegurar que esté por encima del menú */
+    }
+}
+
+/* Ocultar ícono de menú en pantallas grandes */
+@media (min-width: 1191px) {
+    .menu-icon {
+        display: none; /* Ocultar ícono de menú en pantallas grandes */
+    }
+}
+

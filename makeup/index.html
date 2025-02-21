@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/makeup/makeup-galeria.css">
+    <link rel="stylesheet" href="/sidebar-menu.css">
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css' rel='stylesheet'/>
+    <link rel="stylesheet" href="/style.css">
+    <title>Makeup | Laura</title>
+</head>
+<body>
+    <div class="menu-icon" onclick="toggleMenu()">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+    <main class="container">
+        <section id="titulo-section">
+            <h1><i class="fa-solid fa-image"></i> Maquillaje</h1>
+            <p class="fancy-text-makeup">Laura Castro</p>
+        </section>
+        <section id="galeria">
+            <div id="galeria-cards"></div>
+        </section>
+        <section id="botones-galeria">
+            <button><i class="fa-solid fa-arrow-left"></i></button>
+            <span id="page-number" class="button-fake">1</span>
+            <button><i class="fa-solid fa-arrow-right"></i></button>
+        </section>
+    </main>
+    <nav class="sidebar right" id="sidebar-menu">
+        <div class="header-right">
+            <h1>LAURA</h1>
+            <h2>CASTRO</h2>
+            <p class="fancy-text-right">Makeup artist</p>
+        </div>
+        <a href="/">inicio</a>
+        <a class="btn-selecionado">Makeup</a>
+        <a href="/manicura/">Manicura</a>
+        <a href="/estudios/">Estudios</a>
+        <a href="/contacto/" >Contacto</a>
+        <section id="nav-parte-inferior">
+            <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i>Instagram</a>
+            <a href="https://instagram.com"><i class="fa-solid fa-envelope"></i>Contact</a>
+            <a href="https://instagram.com"><i class="fa-solid fa-file"></i>Descargar CV</a>
+        </section>
+    </nav>
+    <script src="/fondo-estrellas.js"></script>
+    <script src="/makeup/galeria.js"></script>
+</body>
+</html>

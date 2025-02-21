@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/contacto/contacto-main.css">
+    <link rel="stylesheet" href="/sidebar-menu.css">
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css' rel='stylesheet'/>
+    <link rel="stylesheet" href="/style.css">
+    <title>Estudios | Laura</title>
+</head>
+<body>
+    <main class="container">
+        <section id="titulo-section">
+            <h1><i class="fa-solid fa-envelope"></i> Contacto</h1>
+            <p class="fancy-text-makeup">Laura Castro</p>
+        </section>
+        
+        <!-- Nueva sección para contacto -->
+        <section id="contact-info">
+            <h2><i class="fa-solid fa-phone"></i> Información de Contacto</h2>
+            <p><strong>Teléfono:</strong></p>
+            <p class="contact-detail"><i class="fa-solid fa-mobile"></i> +34 123 456 789 <button class="copy-button" onclick="copyToClipboard('tel')"><i class="fa-solid fa-copy" style="color: white;"></i> Copiar</button></p>
+            <p><strong>Correo Electrónico:</strong></p>
+            <p class="contact-detail"><i class="fa-solid fa-envelope"></i> laura@example.com <button class="copy-button" onclick="copyToClipboard('email')"><i class="fa-solid fa-copy" style="color: white;"></i> Copiar</button></p>
+        </section>
+    </main>
+    <nav class="sidebar right">
+        <div class="header-right">
+            <h1>LAURA</h1>
+            <h2>CASTRO</h2>
+            <p class="fancy-text-right">Makeup artist</p>
+        </div>
+        <a href="/">inicio</a>
+        <a href="/makeup/">Makeup</a>
+        <a href="/manicura/">Manicura</a>
+        <a href="/estudios/" >Estudios</a>
+        <a class="btn-selecionado">Contacto</a>
+        <section id="nav-parte-inferior">
+            <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i>Instagram</a>
+            <a href="https://instagram.com"><i class="fa-solid fa-envelope"></i>Contact</a>
+            <a href="https://instagram.com"><i class="fa-solid fa-file"></i>Descargar CV</a>
+        </section>
+    </nav>
+    <script src="/fondo-estrellas.js"></script>
+    <script src="/manicura/galeria.js"></script>
+    <script src="/contacto/copy.js"></script>
+</body>
+</html>

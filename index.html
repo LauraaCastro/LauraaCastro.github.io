@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/sidebar-menu.css">
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css' rel='stylesheet'/>
+    <title>Mi Portafolio</title>
+</head>
+<body>
+    <main class="container">
+        <div class="menu-icon" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <section class="left-section">
+            <div class="header">
+                <h1>LAURA</h1>
+                <h2>CASTRO</h2>
+                <p class="fancy-text">Makeup artist</p>
+            </div>
+            <div class="description">
+                <p>Soy Laura, me dedico a maquillar y pintar uñas. Descripción descripción descripción descripción... Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit autem quia distinctio excepturi quaerat quibusdam reprehenderit debitis, sint sed libero iure velit quas ullam alias labore omnis cupiditate nemo possimus.</p>
+            </div>
+            <div class="image-section">
+                <div class="image-box">
+                    <a href="/manicura/">
+                        <img src="src/manicura.png" alt="Manicura">
+                        <span>Manicura</span>
+                    </a>
+                </div>
+                <div class="image-box">
+                    <a href="/makeup/">
+                        <img src="src/makeup.png" alt="Makeup">
+                        <span>Makeup</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="logo-right">
+            <img src="src/logo.png" alt="LAURA">
+        </section>
+    </main>
+    <nav class="sidebar right">
+        <div class="header-right">
+            <h1>LAURA</h1>
+            <h2>CASTRO</h2>
+            <p class="fancy-text-right">Makeup artist</p>
+        </div>
+        <a class="btn-selecionado">inicio</a>
+        <a href="/makeup/">Makeup</a>
+        <a href="/manicura/">Manicura</a>
+        <a href="/estudios/">Estudios</a>
+        <a href="/contacto/">Contacto</a>
+        <section id="nav-parte-inferior">
+            <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i>Instagram</a>
+            <a href="https://instagram.com"><i class="fa-solid fa-envelope"></i>Contact</a>
+            <a href="https://instagram.com"><i class="fa-solid fa-file"></i>Descargar CV</a>
+        </section>
+    </nav>
+    <script src="/fondo-estrellas.js"></script>
+    <script src="makeup/galeria.js"></script>
+    <script src="/path/to/sidebar-menu.js"></script>
+    <script>
+        function toggleMenu() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

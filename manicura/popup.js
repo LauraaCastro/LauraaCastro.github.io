@@ -1,0 +1,1 @@
+// Este archivo se puede dejar vacío si la lógica está en galeria.js 
