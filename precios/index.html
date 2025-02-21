@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/makeup/makeup-galeria.css">
+    <link rel="stylesheet" href="/precios/precios-main.css">
     <link rel="stylesheet" href="/sidebar-menu.css">
     <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css' rel='stylesheet'/>
     <link href="https://fonts.googleapis.com/css2?family=Tangerine&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
-    <title>Makeup | Laura</title>
+    <title>Precios | Laura</title>
 </head>
 <body>
     <div class="menu-icon" onclick="toggleMenu()">
@@ -16,30 +16,44 @@
     </div>
     <main class="container">
         <section id="titulo-section">
-            <h1><i class="fa-solid fa-image"></i> Maquillaje</h1>
-            <p class="fancy-text-makeup">Laura Castro</p>
+            <h1>PRECIOS</h1>
+            <p class="fancy-text-precios">Laura Castro</p>
         </section>
-        <section id="galeria">
-            <div id="galeria-cards"></div>
-        </section>
-        <section id="botones-galeria">
-            <button><i class="fa-solid fa-arrow-left"></i></button>
-            <span id="page-number" class="button-fake">1</span>
-            <button><i class="fa-solid fa-arrow-right"></i></button>
+        <section id="precios-grid">
+            <div class="precio-card" id="manicura">
+                <h2>MANICURA</h2>
+                <img src="/src/manicura.png" alt="Manicura">
+                <a href="/precios/manicura" class="ver-precios">Ver Precios</a>
+            </div>
+            <div class="precio-card" id="pedicura">
+                <h2>PEDICURA</h2>
+                <img src="/src/manicura.png" alt="Pedicura">
+                <a href="/precios/pedicura" class="ver-precios">Ver Precios</a>
+            </div>
+            <div class="precio-card" id="relleno">
+                <h2>RELLENO Y MANTENIMIENTO</h2>
+                <img src="/src/manicura.png" alt="Relleno y Mantenimiento">
+                <a href="/precios/relleno" class="ver-precios">Ver Precios</a>
+            </div>
+            <div class="precio-card" id="maquillaje">
+                <h2>MAQUILLAJE</h2>
+                <img src="/src/makeup.png" alt="Maquillaje">
+                <a href="/precios/maquillaje" class="ver-precios">Ver Precios</a>
+            </div>
         </section>
     </main>
-    <nav class="sidebar right" id="sidebar-menu">
+    <nav class="sidebar right">
         <div class="header-right">
             <h1>LAURA</h1>
             <h2>CASTRO</h2>
             <p class="fancy-text-right">Makeup <span style="font-family: 'Tangerine', cursive;">&</span> nail </p>
         </div>
         <a href="/">inicio</a>
-        <a class="btn-selecionado">Makeup</a>
+        <a href="/makeup/">Makeup</a>
         <a href="/manicura/">Manicura</a>
         <a href="/estudios/">Estudios</a>
-        <a href="/precios/">Precios</a>
-        <a href="/contacto/" >Contacto</a>
+        <a class="btn-selecionado">Precios</a>
+        <a href="/contacto/">Contacto</a>
         <section id="nav-parte-inferior">
             <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i>Instagram</a>
             <a href="https://instagram.com"><i class="fa-solid fa-envelope"></i>Contact</a>
@@ -47,6 +61,5 @@
         </section>
     </nav>
     <script src="/fondo-estrellas.js"></script>
-    <script src="/makeup/galeria.js"></script>
 </body>
 </html>

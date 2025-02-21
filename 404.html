@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/src/Laura_1.webp">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/sidebar-menu.css">
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css' rel='stylesheet'/>
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine&display=swap" rel="stylesheet">
+    <title>404 - Página no encontrada | Laura Castro</title>
+    <style>
+        .error-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            padding: 2rem;
+        }
+        .error-code {
+            font-size: 8rem;
+            font-weight: bold;
+            margin: 0;
+            background: linear-gradient(45deg, var(--color-sidebar-background), #ff69b4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .error-message {
+            font-size: 1.5rem;
+            margin: 1rem 0;
+            color: #fff;
+        }
+        .error-description {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 2rem;
+        }
+        .home-button {
+            padding: 1rem 2rem;
+            background: linear-gradient(45deg, var(--color-sidebar-background), #ff69b4);
+            border: none;
+            border-radius: 25px;
+            color: white;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+        .home-button:hover {
+            transform: scale(1.05);
+        }
+        .error-icon {
+            font-size: 4rem;
+            margin: 1rem 0;
+            background: linear-gradient(45deg, var(--color-sidebar-background), #ff69b4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <div class="menu-icon" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="error-container">
+            <h1 class="error-code">404</h1>
+            <i class="fa-solid fa-paint-brush error-icon"></i>
+            <h2 class="error-message">¡Ups! Página no encontrada</h2>
+            <p class="error-description">Parece que esta página se ha desvanecido como el maquillaje al final del día...</p>
+            <a href="/" class="home-button">Volver al inicio</a>
+        </div>
+    </main>
+    <nav class="sidebar right">
+        <div class="header-right">
+            <h1>LAURA</h1>
+            <h2>CASTRO</h2>
+            <p class="fancy-text-right">Makeup <span style="font-family: 'Tangerine', cursive;">&</span> nail </p>
+        </div>
+        <a href="/">inicio</a>
+        <a href="/makeup/">Makeup</a>
+        <a href="/manicura/">Manicura</a>
+        <a href="/estudios/">Estudios</a>
+        <a href="/precios/">Precios</a>
+        <a href="/contacto/">Contacto</a>
+        <section id="nav-parte-inferior">
+            <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i>Instagram</a>
+            <a href="https://instagram.com"><i class="fa-solid fa-envelope"></i>Contact</a>
+            <a href="https://instagram.com"><i class="fa-solid fa-file"></i>Descargar CV</a>
+        </section>
+    </nav>
+    <script src="/fondo-estrellas.js"></script>
+    <script>
+        function toggleMenu() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

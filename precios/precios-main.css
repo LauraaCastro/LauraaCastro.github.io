@@ -1,0 +1,135 @@
+/* CSS */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Festive&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+:root {
+    --color-background-1: #ff758c;
+    --color-background-2: #ff7eb3;
+    --color-background-3: #a18cd1;
+    --color-background-4: #6247aa;
+    --color-text-white: white;
+    --color-text-dark: #542731;
+    --color-button-border: white;
+    --color-button-hover: #a18cd1;
+    --color-image-border: rgba(255, 255, 255, 0.5);
+}
+
+* {
+    font-family: 'Julius Sans One', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, var(--color-background-1), var(--color-background-2), var(--color-background-3), var(--color-background-4));
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    height: 90vh;
+    padding: 20px 20% 0 0;
+    flex-direction: column;
+    align-items: center;
+}
+
+#titulo-section {
+    position: relative;
+    padding: 20px 70px 20px 50px;
+    border: solid 6px var(--color-text-white);
+    margin-bottom: 40px;
+}
+
+#titulo-section h1 {
+    color: var(--color-text-white);
+    font-size: 2.5em;
+    text-align: center;
+}
+
+.fancy-text-precios {
+    font-family: 'Great Vibes', cursive;
+    color: var(--color-text-white);
+    font-size: 2em;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#precios-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.precio-card {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid var(--color-text-white);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.precio-card:hover {
+    transform: translateY(-5px);
+}
+
+.precio-card h2 {
+    color: var(--color-text-white);
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.precio-card img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 10px;
+    margin: 15px 0;
+    border: 3px solid var(--color-image-border);
+}
+
+.ver-precios {
+    display: inline-block;
+    padding: 10px 30px;
+    background: transparent;
+    border: 2px solid var(--color-button-border);
+    color: var(--color-text-white);
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+}
+
+.ver-precios:hover {
+    background: var(--color-button-hover);
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    #precios-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .container {
+        padding: 20px 10px;
+    }
+    
+    #titulo-section {
+        padding: 15px 30px;
+    }
+    
+    #titulo-section h1 {
+        font-size: 2em;
+    }
+}
