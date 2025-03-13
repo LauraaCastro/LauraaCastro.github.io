@@ -14,6 +14,9 @@
     --color-button-border: white;
     --color-button-hover: #a18cd1;
     --color-image-border: rgba(255, 255, 255, 0.5);
+    --color-white: #ffffff;
+    --color-black-shadow: rgba(0, 0, 0, 0.5);
+    --color-transparent-bg: rgba(255, 255, 255, 0.1);
 }
 
 * {
@@ -72,7 +75,7 @@ body {
 }
 
 .precio-card {
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--color-transparent-bg);
     border: 2px solid var(--color-text-white);
     border-radius: 15px;
     padding: 20px;

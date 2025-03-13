@@ -16,6 +16,12 @@
     --color-button-hover: #a18cd1;
     --color-image-border: rgba(255, 255, 255, 0.5);
     --color-barra-left: #C4B29F;
+    --color-gradient-start: rgba(196, 178, 159, 1);
+    --color-gradient-end: rgba(255, 255, 255, 1);
+    --color-white: #ffffff;
+    --color-black-shadow: rgba(0, 0, 0, 0.5);
+    --color-main-content: #eac7d1;
+    --color-transparent-bg: rgba(255, 255, 255, 0.1);
 }
 
 * {
@@ -65,8 +71,8 @@ body {
     line-height: 80%;
     background: linear-gradient(
         90deg,
-        rgba(196, 178, 159, 1) 0%,
-        rgba(255, 255, 255, 1) 100%
+        var(--color-gradient-start) 0%,
+        var(--color-gradient-end) 100%
       );
       background-clip: text;
       -webkit-background-clip: text;
@@ -78,8 +84,8 @@ body {
     color: var(--color-text-white);
     background: linear-gradient(
         90deg,
-        rgba(196, 178, 159, 1) 0%,
-        rgba(255, 255, 255, 1) 100%
+        var(--color-gradient-start) 0%,
+        var(--color-gradient-end) 100%
       );
       background-clip: text;
       -webkit-background-clip: text;
@@ -317,4 +323,1410 @@ body {
 .copy-button.copied {
     background-color: #ff9999; /* Color rojo menos claro */
     color: #542731; /* Color del texto */
+}
+.fancy-text {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4em;
+    color: var(--color-text-dark);
+    bottom: 10px;
+    left: 40%;
+    position: absolute;
+}
+.fancy-text-makeup{
+    font-family: 'Great Vibes', cursive;
+    font-size: 4em;
+    color: var(--color-text-dark);
+    bottom: -30px;
+    left: 50%;
+    position: absolute;
+}
+.description {
+    margin-top: 10px;
+    font-size: 1.7em;
+    color: var(--color-text-white);
+}
+.image-section {
+    display: flex;
+    gap: 20px;
+    margin-top: 20%;
+}
+
+.right-section {
+    width: 40%;
+    background: var(--color-sidebar-background);
+    border-radius: 10px;
+    margin-left: 20px;
+}
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+    padding-left: 80px;
+}
+.main-content h1 {
+    font-size: 3em;
+    font-weight: 700;
+    color: #eac7d1;
+    font-family: 'Julius Sans One', sans-serif;
+}
+.main-content p {
+    font-size: 1.2em;
+    font-style: italic;
+    max-width: 500px;
+}
+.button {
+    background: transparent;
+    border: 2px solid var(--color-button-border);
+    color: var(--color-button-border);
+    padding: 12px 24px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+.button:hover {
+    background: var(--color-button-border);
+    color: var(--color-button-hover);
+}
+.glitter {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0;
+    animation: sparkle 2s infinite ease-in-out;
+    z-index: -1;
+}
+@keyframes sparkle {
+    0%, 100% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+/* Estilo para el contenedor de estudios */
+#estudios-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en varias filas */
+    gap: 20px; /* Espacio entre las tarjetas */
+    justify-content: center; /* Centra las tarjetas en el contenedor */
+    margin-top: 3%; /* Margen superior para separar del título */
+}
+
+/* Estilo para las tarjetas de estudios */
+.card-estudios {
+    background: rgba(255, 255, 255, 0.8); /* Fondo más opaco */
+    border: 2px solid #ffffff; /* Borde blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    height: 338px; /* Altura fija */
+    position: relative;
+    backdrop-filter: blur(4.45px);
+    width: calc(33.33% - 20px); /* Ancho de las tarjetas para 3 por fila, restando margen */
+    display: flex;
+    flex-direction: column; /* Permite que el contenido se apile verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    justify-content: center; /* Centra el contenido verticalmente */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+    transition: transform 0.3s; /* Transición para el efecto hover */
+}
+
+@media (max-width: 768px) {
+    .card-estudios {
+        width: calc(50% - 20px); /* Ancho de las tarjetas para 2 por fila en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .card-estudios {
+        width: calc(100% - 20px); /* Ancho completo en pantallas muy pequeñas */
+    }
+}
+
+.card-estudios:hover {
+    transform: scale(1.05); /* Efecto de aumento al pasar el mouse */
+}
+
+.card-estudios h1 {
+    font-size: 1.5em; /* Tamaño de fuente para el título */
+    color: #542731; /* Color del texto */
+    margin: 10px 0; /* Margen superior e inferior */
+    text-align: center; /* Alinear el texto al centro */
+}
+
+.card-estudios h2 {
+    font-size: 1em; /* Tamaño de fuente para el subtítulo */
+    color: #777; /* Color del subtítulo */
+    margin-bottom: 10px; /* Margen inferior */
+}
+
+.card-estudios img {
+    width: 100px; /* Ancho de la imagen */
+    margin-top: 10px; /* Margen superior */
+}
+
+.ver-button {
+    background-color: #542731; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    text-decoration: none; /* Sin subrayado */
+    margin-top: 10px; /* Margen superior */
+    transition: background-color 0.3s; /* Transición para el efecto hover */
+}
+
+.ver-button:hover {
+    background-color: #777; /* Color de fondo al pasar el mouse */
+}
+
+/* Estilos para la nueva sección de información de contacto */
+#contact-info {
+    margin-top: 4%; /* Margen superior del 4% */
+    padding: 40px; /* Aumentar el espaciado interno */
+    background-color: rgba(255, 255, 255, 0.4); /* Fondo más opaco */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    transition: transform 0.3s; /* Transición para el efecto hover */
+    display: flex; /* Usar flex para alinear elementos */
+    flex-direction: column; /* Colocar elementos en columna */
+    align-items: center; /* Centrar horizontalmente */
+}
+
+#contact-info:hover {
+    transform: scale(1.02); /* Efecto de aumento al pasar el mouse */
+}
+
+#contact-info h2 {
+    font-size: 2.5em; /* Aumentar el tamaño de fuente del título */
+    margin-bottom: 15px; /* Espacio inferior */
+    color: #542731; /* Color del texto */
+    text-align: center; /* Centrar el texto */
+}
+
+#contact-info p {
+    font-size: 1.5em; /* Aumentar el tamaño de fuente de los párrafos */
+    margin: 10px 0; /* Espaciado vertical entre párrafos */
+    display: flex; /* Usar flex para alinear icono y texto */
+    justify-content: flex-start; /* Alinear a la izquierda */
+    align-items: center; /* Centrar verticalmente */
+    width: 100%; /* Asegurar que ocupe todo el ancho */
+    max-width: 600px; /* Ancho máximo para mantener la alineación */
+}
+
+.contact-detail {
+    color: #333; /* Color del texto de detalles de contacto */
+    font-weight: bold; /* Negrita para destacar */
+    display: flex; /* Usar flex para alinear icono y texto */
+    align-items: center; /* Centrar verticalmente */
+    margin: 0; /* Eliminar margen para que el icono esté pegado al texto */
+}
+
+.contact-detail i {
+    margin-right: 5px; /* Espacio reducido entre el icono y el texto */
+    color: #542731; /* Color del icono */
+}
+
+.copy-button {
+    background-color: #542731; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 5px 10px; /* Espaciado interno */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s; /* Transición para el efecto hover */
+    margin-left: 10px; /* Espacio entre el texto y el botón */
+}
+
+.copy-button:hover {
+    background-color: #777; /* Color de fondo al pasar el mouse */
+}
+
+.copy-button i {
+    color: white; /* Cambiar el color del icono a blanco */
+}
+
+.copy-button.copied {
+    background-color: #ff9999; /* Color rojo menos claro */
+    color: #542731; /* Color del texto */
+}
+.fancy-text {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4em;
+    color: var(--color-text-dark);
+    bottom: 10px;
+    left: 40%;
+    position: absolute;
+}
+.fancy-text-makeup{
+    font-family: 'Great Vibes', cursive;
+    font-size: 4em;
+    color: var(--color-text-dark);
+    bottom: -30px;
+    left: 50%;
+    position: absolute;
+}
+.description {
+    margin-top: 10px;
+    font-size: 1.7em;
+    color: var(--color-text-white);
+}
+.image-section {
+    display: flex;
+    gap: 20px;
+    margin-top: 20%;
+}
+
+.right-section {
+    width: 40%;
+    background: var(--color-sidebar-background);
+    border-radius: 10px;
+    margin-left: 20px;
+}
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+    padding-left: 80px;
+}
+.main-content h1 {
+    font-size: 3em;
+    font-weight: 700;
+    color: #eac7d1;
+    font-family: 'Julius Sans One', sans-serif;
+}
+.main-content p {
+    font-size: 1.2em;
+    font-style: italic;
+    max-width: 500px;
+}
+.button {
+    background: transparent;
+    border: 2px solid var(--color-button-border);
+    color: var(--color-button-border);
+    padding: 12px 24px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+.button:hover {
+    background: var(--color-button-border);
+    color: var(--color-button-hover);
+}
+.glitter {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0;
+    animation: sparkle 2s infinite ease-in-out;
+    z-index: -1;
+}
+@keyframes sparkle {
+    0%, 100% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+/* Estilo para el contenedor de estudios */
+#estudios-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en varias filas */
+    gap: 20px; /* Espacio entre las tarjetas */
+    justify-content: center; /* Centra las tarjetas en el contenedor */
+    margin-top: 3%; /* Margen superior para separar del título */
+}
+
+/* Estilo para las tarjetas de estudios */
+.card-estudios {
+    background: rgba(255, 255, 255, 0.8); /* Fondo más opaco */
+    border: 2px solid #ffffff; /* Borde blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    height: 338px; /* Altura fija */
+    position: relative;
+    backdrop-filter: blur(4.45px);
+    width: calc(33.33% - 20px); /* Ancho de las tarjetas para 3 por fila, restando margen */
+    display: flex;
+    flex-direction: column; /* Permite que el contenido se apile verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    justify-content: center; /* Centra el contenido verticalmente */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+    transition: transform 0.3s; /* Transición para el efecto hover */
+}
+
+@media (max-width: 768px) {
+    .card-estudios {
+        width: calc(50% - 20px); /* Ancho de las tarjetas para 2 por fila en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .card-estudios {
+        width: calc(100% - 20px); /* Ancho completo en pantallas muy pequeñas */
+    }
+}
+
+.card-estudios:hover {
+    transform: scale(1.05); /* Efecto de aumento al pasar el mouse */
+}
+
+.card-estudios h1 {
+    font-size: 1.5em; /* Tamaño de fuente para el título */
+    color: #542731; /* Color del texto */
+    margin: 10px 0; /* Margen superior e inferior */
+    text-align: center; /* Alinear el texto al centro */
+}
+
+.card-estudios h2 {
+    font-size: 1em; /* Tamaño de fuente para el subtítulo */
+    color: #777; /* Color del subtítulo */
+    margin-bottom: 10px; /* Margen inferior */
+}
+
+.card-estudios img {
+    width: 100px; /* Ancho de la imagen */
+    margin-top: 10px; /* Margen superior */
+}
+
+.ver-button {
+    background-color: #542731; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    text-decoration: none; /* Sin subrayado */
+    margin-top: 10px; /* Margen superior */
+    transition: background-color 0.3s; /* Transición para el efecto hover */
+}
+
+.ver-button:hover {
+    background-color: #777; /* Color de fondo al pasar el mouse */
+}
+
+/* Estilos para la nueva sección de información de contacto */
+#contact-info {
+    margin-top: 4%; /* Margen superior del 4% */
+    padding: 40px; /* Aumentar el espaciado interno */
+    background-color: rgba(255, 255, 255, 0.4); /* Fondo más opaco */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    transition: transform 0.3s; /* Transición para el efecto hover */
+    display: flex; /* Usar flex para alinear elementos */
+    flex-direction: column; /* Colocar elementos en columna */
+    align-items: center; /* Centrar horizontalmente */
+}
+
+#contact-info:hover {
+    transform: scale(1.02); /* Efecto de aumento al pasar el mouse */
+}
+
+#contact-info h2 {
+    font-size: 2.5em; /* Aumentar el tamaño de fuente del título */
+    margin-bottom: 15px; /* Espacio inferior */
+    color: #542731; /* Color del texto */
+    text-align: center; /* Centrar el texto */
+}
+
+#contact-info p {
+    font-size: 1.5em; /* Aumentar el tamaño de fuente de los párrafos */
+    margin: 10px 0; /* Espaciado vertical entre párrafos */
+    display: flex; /* Usar flex para alinear icono y texto */
+    justify-content: flex-start; /* Alinear a la izquierda */
+    align-items: center; /* Centrar verticalmente */
+    width: 100%; /* Asegurar que ocupe todo el ancho */
+    max-width: 600px; /* Ancho máximo para mantener la alineación */
+}
+
+.contact-detail {
+    color: #333; /* Color del texto de detalles de contacto */
+    font-weight: bold; /* Negrita para destacar */
+    display: flex; /* Usar flex para alinear icono y texto */
+    align-items: center; /* Centrar verticalmente */
+    margin: 0; /* Eliminar margen para que el icono esté pegado al texto */
+}
+
+.contact-detail i {
+    margin-right: 5px; /* Espacio reducido entre el icono y el texto */
+    color: #542731; /* Color del icono */
+}
+
+.copy-button {
+    background-color: #542731; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 5px 10px; /* Espaciado interno */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s; /* Transición para el efecto hover */
+    margin-left: 10px; /* Espacio entre el texto y el botón */
+}
+
+.copy-button:hover {
+    background-color: #777; /* Color de fondo al pasar el mouse */
+}
+
+.copy-button i {
+    color: white; /* Cambiar el color del icono a blanco */
+}
+
+.copy-button.copied {
+    background-color: #ff9999; /* Color rojo menos claro */
+    color: #542731; /* Color del texto */
+}
+.fancy-text {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4em;
+    color: var(--color-text-dark);
+    bottom: 10px;
+    left: 40%;
+    position: absolute;
+}
+.fancy-text-makeup{
+    font-family: 'Great Vibes', cursive;
+    font-size: 4em;
+    color: var(--color-text-dark);
+    bottom: -30px;
+    left: 50%;
+    position: absolute;
+}
+.description {
+    margin-top: 10px;
+    font-size: 1.7em;
+    color: var(--color-text-white);
+}
+.image-section {
+    display: flex;
+    gap: 20px;
+    margin-top: 20%;
+}
+
+.right-section {
+    width: 40%;
+    background: var(--color-sidebar-background);
+    border-radius: 10px;
+    margin-left: 20px;
+}
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+    padding-left: 80px;
+}
+.main-content h1 {
+    font-size: 3em;
+    font-weight: 700;
+    color: #eac7d1;
+    font-family: 'Julius Sans One', sans-serif;
+}
+.main-content p {
+    font-size: 1.2em;
+    font-style: italic;
+    max-width: 500px;
+}
+.button {
+    background: transparent;
+    border: 2px solid var(--color-button-border);
+    color: var(--color-button-border);
+    padding: 12px 24px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+.button:hover {
+    background: var(--color-button-border);
+    color: var(--color-button-hover);
+}
+.glitter {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0;
+    animation: sparkle 2s infinite ease-in-out;
+    z-index: -1;
+}
+@keyframes sparkle {
+    0%, 100% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+/* Estilo para el contenedor de estudios */
+#estudios-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en varias filas */
+    gap: 20px; /* Espacio entre las tarjetas */
+    justify-content: center; /* Centra las tarjetas en el contenedor */
+    margin-top: 3%; /* Margen superior para separar del título */
+}
+
+/* Estilo para las tarjetas de estudios */
+.card-estudios {
+    background: rgba(255, 255, 255, 0.8); /* Fondo más opaco */
+    border: 2px solid #ffffff; /* Borde blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    height: 338px; /* Altura fija */
+    position: relative;
+    backdrop-filter: blur(4.45px);
+    width: calc(33.33% - 20px); /* Ancho de las tarjetas para 3 por fila, restando margen */
+    display: flex;
+    flex-direction: column; /* Permite que el contenido se apile verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    justify-content: center; /* Centra el contenido verticalmente */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+    transition: transform 0.3s; /* Transición para el efecto hover */
+}
+
+@media (max-width: 768px) {
+    .card-estudios {
+        width: calc(50% - 20px); /* Ancho de las tarjetas para 2 por fila en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .card-estudios {
+        width: calc(100% - 20px); /* Ancho completo en pantallas muy pequeñas */
+    }
+}
+
+.card-estudios:hover {
+    transform: scale(1.05); /* Efecto de aumento al pasar el mouse */
+}
+
+.card-estudios h1 {
+    font-size: 1.5em; /* Tamaño de fuente para el título */
+    color: #542731; /* Color del texto */
+    margin: 10px 0; /* Margen superior e inferior */
+    text-align: center; /* Alinear el texto al centro */
+}
+
+.card-estudios h2 {
+    font-size: 1em; /* Tamaño de fuente para el subtítulo */
+    color: #777; /* Color del subtítulo */
+    margin-bottom: 10px; /* Margen inferior */
+}
+
+.card-estudios img {
+    width: 100px; /* Ancho de la imagen */
+    margin-top: 10px; /* Margen superior */
+}
+
+.ver-button {
+    background-color: #542731; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    text-decoration: none; /* Sin subrayado */
+    margin-top: 10px; /* Margen superior */
+    transition: background-color 0.3s; /* Transición para el efecto hover */
+}
+
+.ver-button:hover {
+    background-color: #777; /* Color de fondo al pasar el mouse */
+}
+
+/* Estilos para la nueva sección de información de contacto */
+#contact-info {
+    margin-top: 4%; /* Margen superior del 4% */
+    padding: 40px; /* Aumentar el espaciado interno */
+    background-color: rgba(255, 255, 255, 0.4); /* Fondo más opaco */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    transition: transform 0.3s; /* Transición para el efecto hover */
+    display: flex; /* Usar flex para alinear elementos */
+    flex-direction: column; /* Colocar elementos en columna */
+    align-items: center; /* Centrar horizontalmente */
+}
+
+#contact-info:hover {
+    transform: scale(1.02); /* Efecto de aumento al pasar el mouse */
+}
+
+#contact-info h2 {
+    font-size: 2.5em; /* Aumentar el tamaño de fuente del título */
+    margin-bottom: 15px; /* Espacio inferior */
+    color: #542731; /* Color del texto */
+    text-align: center; /* Centrar el texto */
+}
+
+#contact-info p {
+    font-size: 1.5em; /* Aumentar el tamaño de fuente de los párrafos */
+    margin: 10px 0; /* Espaciado vertical entre párrafos */
+    display: flex; /* Usar flex para alinear icono y texto */
+    justify-content: flex-start; /* Alinear a la izquierda */
+    align-items: center; /* Centrar verticalmente */
+    width: 100%; /* Asegurar que ocupe todo el ancho */
+    max-width: 600px; /* Ancho máximo para mantener la alineación */
+}
+
+.contact-detail {
+    color: #333; /* Color del texto de detalles de contacto */
+    font-weight: bold; /* Negrita para destacar */
+    display: flex; /* Usar flex para alinear icono y texto */
+    align-items: center; /* Centrar verticalmente */
+    margin: 0; /* Eliminar margen para que el icono esté pegado al texto */
+}
+
+.contact-detail i {
+    margin-right: 5px; /* Espacio reducido entre el icono y el texto */
+    color: #542731; /* Color del icono */
+}
+
+.copy-button {
+    background-color: #542731; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 5px 10px; /* Espaciado interno */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s; /* Transición para el efecto hover */
+    margin-left: 10px; /* Espacio entre el texto y el botón */
+}
+
+.copy-button:hover {
+    background-color: #777; /* Color de fondo al pasar el mouse */
+}
+
+.copy-button i {
+    color: white; /* Cambiar el color del icono a blanco */
+}
+
+.copy-button.copied {
+    background-color: #ff9999; /* Color rojo menos claro */
+    color: #542731; /* Color del texto */
+}
+.fancy-text {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4em;
+    color: var(--color-text-dark);
+    bottom: 10px;
+    left: 40%;
+    position: absolute;
+}
+.fancy-text-makeup{
+    font-family: 'Great Vibes', cursive;
+    font-size: 4em;
+    color: var(--color-text-dark);
+    bottom: -30px;
+    left: 50%;
+    position: absolute;
+}
+.description {
+    margin-top: 10px;
+    font-size: 1.7em;
+    color: var(--color-text-white);
+}
+.image-section {
+    display: flex;
+    gap: 20px;
+    margin-top: 20%;
+}
+
+.right-section {
+    width: 40%;
+    background: var(--color-sidebar-background);
+    border-radius: 10px;
+    margin-left: 20px;
+}
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+    padding-left: 80px;
+}
+.main-content h1 {
+    font-size: 3em;
+    font-weight: 700;
+    color: #eac7d1;
+    font-family: 'Julius Sans One', sans-serif;
+}
+.main-content p {
+    font-size: 1.2em;
+    font-style: italic;
+    max-width: 500px;
+}
+.button {
+    background: transparent;
+    border: 2px solid var(--color-button-border);
+    color: var(--color-button-border);
+    padding: 12px 24px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+.button:hover {
+    background: var(--color-button-border);
+    color: var(--color-button-hover);
+}
+.glitter {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0;
+    animation: sparkle 2s infinite ease-in-out;
+    z-index: -1;
+}
+@keyframes sparkle {
+    0%, 100% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+/* Estilo para el contenedor de estudios */
+#estudios-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en varias filas */
+    gap: 20px; /* Espacio entre las tarjetas */
+    justify-content: center; /* Centra las tarjetas en el contenedor */
+    margin-top: 3%; /* Margen superior para separar del título */
+}
+
+/* Estilo para las tarjetas de estudios */
+.card-estudios {
+    background: rgba(255, 255, 255, 0.8); /* Fondo más opaco */
+    border: 2px solid #ffffff; /* Borde blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    height: 338px; /* Altura fija */
+    position: relative;
+    backdrop-filter: blur(4.45px);
+    width: calc(33.33% - 20px); /* Ancho de las tarjetas para 3 por fila, restando margen */
+    display: flex;
+    flex-direction: column; /* Permite que el contenido se apile verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    justify-content: center; /* Centra el contenido verticalmente */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+    transition: transform 0.3s; /* Transición para el efecto hover */
+}
+
+@media (max-width: 768px) {
+    .card-estudios {
+        width: calc(50% - 20px); /* Ancho de las tarjetas para 2 por fila en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .card-estudios {
+        width: calc(100% - 20px); /* Ancho completo en pantallas muy pequeñas */
+    }
+}
+
+.card-estudios:hover {
+    transform: scale(1.05); /* Efecto de aumento al pasar el mouse */
+}
+
+.card-estudios h1 {
+    font-size: 1.5em; /* Tamaño de fuente para el título */
+    color: #542731; /* Color del texto */
+    margin: 10px 0; /* Margen superior e inferior */
+    text-align: center; /* Alinear el texto al centro */
+}
+
+.card-estudios h2 {
+    font-size: 1em; /* Tamaño de fuente para el subtítulo */
+    color: #777; /* Color del subtítulo */
+    margin-bottom: 10px; /* Margen inferior */
+}
+
+.card-estudios img {
+    width: 100px; /* Ancho de la imagen */
+    margin-top: 10px; /* Margen superior */
+}
+
+.ver-button {
+    background-color: #542731; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    text-decoration: none; /* Sin subrayado */
+    margin-top: 10px; /* Margen superior */
+    transition: background-color 0.3s; /* Transición para el efecto hover */
+}
+
+.ver-button:hover {
+    background-color: #777; /* Color de fondo al pasar el mouse */
+}
+
+/* Estilos para la nueva sección de información de contacto */
+#contact-info {
+    margin-top: 4%; /* Margen superior del 4% */
+    padding: 40px; /* Aumentar el espaciado interno */
+    background-color: rgba(255, 255, 255, 0.4); /* Fondo más opaco */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    transition: transform 0.3s; /* Transición para el efecto hover */
+    display: flex; /* Usar flex para alinear elementos */
+    flex-direction: column; /* Colocar elementos en columna */
+    align-items: center; /* Centrar horizontalmente */
+}
+
+#contact-info:hover {
+    transform: scale(1.02); /* Efecto de aumento al pasar el mouse */
+}
+
+#contact-info h2 {
+    font-size: 2.5em; /* Aumentar el tamaño de fuente del título */
+    margin-bottom: 15px; /* Espacio inferior */
+    color: #542731; /* Color del texto */
+    text-align: center; /* Centrar el texto */
+}
+
+#contact-info p {
+    font-size: 1.5em; /* Aumentar el tamaño de fuente de los párrafos */
+    margin: 10px 0; /* Espaciado vertical entre párrafos */
+    display: flex; /* Usar flex para alinear icono y texto */
+    justify-content: flex-start; /* Alinear a la izquierda */
+    align-items: center; /* Centrar verticalmente */
+    width: 100%; /* Asegurar que ocupe todo el ancho */
+    max-width: 600px; /* Ancho máximo para mantener la alineación */
+}
+
+.contact-detail {
+    color: #333; /* Color del texto de detalles de contacto */
+    font-weight: bold; /* Negrita para destacar */
+    display: flex; /* Usar flex para alinear icono y texto */
+    align-items: center; /* Centrar verticalmente */
+    margin: 0; /* Eliminar margen para que el icono esté pegado al texto */
+}
+
+.contact-detail i {
+    margin-right: 5px; /* Espacio reducido entre el icono y el texto */
+    color: #542731; /* Color del icono */
+}
+
+.copy-button {
+    background-color: #542731; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 5px 10px; /* Espaciado interno */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s; /* Transición para el efecto hover */
+    margin-left: 10px; /* Espacio entre el texto y el botón */
+}
+
+.copy-button:hover {
+    background-color: #777; /* Color de fondo al pasar el mouse */
+}
+
+.copy-button i {
+    color: white; /* Cambiar el color del icono a blanco */
+}
+
+.copy-button.copied {
+    background-color: #ff9999; /* Color rojo menos claro */
+    color: #542731; /* Color del texto */
+}
+.fancy-text {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4em;
+    color: var(--color-text-dark);
+    bottom: 10px;
+    left: 40%;
+    position: absolute;
+}
+.fancy-text-makeup{
+    font-family: 'Great Vibes', cursive;
+    font-size: 4em;
+    color: var(--color-text-dark);
+    bottom: -30px;
+    left: 50%;
+    position: absolute;
+}
+.description {
+    margin-top: 10px;
+    font-size: 1.7em;
+    color: var(--color-text-white);
+}
+.image-section {
+    display: flex;
+    gap: 20px;
+    margin-top: 20%;
+}
+
+.right-section {
+    width: 40%;
+    background: var(--color-sidebar-background);
+    border-radius: 10px;
+    margin-left: 20px;
+}
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+    padding-left: 80px;
+}
+.main-content h1 {
+    font-size: 3em;
+    font-weight: 700;
+    color: #eac7d1;
+    font-family: 'Julius Sans One', sans-serif;
+}
+.main-content p {
+    font-size: 1.2em;
+    font-style: italic;
+    max-width: 500px;
+}
+.button {
+    background: transparent;
+    border: 2px solid var(--color-button-border);
+    color: var(--color-button-border);
+    padding: 12px 24px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+.button:hover {
+    background: var(--color-button-border);
+    color: var(--color-button-hover);
+}
+.glitter {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0;
+    animation: sparkle 2s infinite ease-in-out;
+    z-index: -1;
+}
+@keyframes sparkle {
+    0%, 100% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+/* Estilo para el contenedor de estudios */
+#estudios-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en varias filas */
+    gap: 20px; /* Espacio entre las tarjetas */
+    justify-content: center; /* Centra las tarjetas en el contenedor */
+    margin-top: 3%; /* Margen superior para separar del título */
+}
+
+/* Estilo para las tarjetas de estudios */
+.card-estudios {
+    background: rgba(255, 255, 255, 0.8); /* Fondo más opaco */
+    border: 2px solid #ffffff; /* Borde blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    height: 338px; /* Altura fija */
+    position: relative;
+    backdrop-filter: blur(4.45px);
+    width: calc(33.33% - 20px); /* Ancho de las tarjetas para 3 por fila, restando margen */
+    display: flex;
+    flex-direction: column; /* Permite que el contenido se apile verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    justify-content: center; /* Centra el contenido verticalmente */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+    transition: transform 0.3s; /* Transición para el efecto hover */
+}
+
+@media (max-width: 768px) {
+    .card-estudios {
+        width: calc(50% - 20px); /* Ancho de las tarjetas para 2 por fila en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .card-estudios {
+        width: calc(100% - 20px); /* Ancho completo en pantallas muy pequeñas */
+    }
+}
+
+.card-estudios:hover {
+    transform: scale(1.05); /* Efecto de aumento al pasar el mouse */
+}
+
+.card-estudios h1 {
+    font-size: 1.5em; /* Tamaño de fuente para el título */
+    color: #542731; /* Color del texto */
+    margin: 10px 0; /* Margen superior e inferior */
+    text-align: center; /* Alinear el texto al centro */
+}
+
+.card-estudios h2 {
+    font-size: 1em; /* Tamaño de fuente para el subtítulo */
+    color: #777; /* Color del subtítulo */
+    margin-bottom: 10px; /* Margen inferior */
+}
+
+.card-estudios img {
+    width: 100px; /* Ancho de la imagen */
+    margin-top: 10px; /* Margen superior */
+}
+
+.ver-button {
+    background-color: #542731; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    text-decoration: none; /* Sin subrayado */
+    margin-top: 10px; /* Margen superior */
+    transition: background-color 0.3s; /* Transición para el efecto hover */
+}
+
+.ver-button:hover {
+    background-color: #777; /* Color de fondo al pasar el mouse */
+}
+
+/* Estilos para la nueva sección de información de contacto */
+#contact-info {
+    margin-top: 4%; /* Margen superior del 4% */
+    padding: 40px; /* Aumentar el espaciado interno */
+    background-color: rgba(255, 255, 255, 0.4); /* Fondo más opaco */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    transition: transform 0.3s; /* Transición para el efecto hover */
+    display: flex; /* Usar flex para alinear elementos */
+    flex-direction: column; /* Colocar elementos en columna */
+    align-items: center; /* Centrar horizontalmente */
+}
+
+#contact-info:hover {
+    transform: scale(1.02); /* Efecto de aumento al pasar el mouse */
+}
+
+#contact-info h2 {
+    font-size: 2.5em; /* Aumentar el tamaño de fuente del título */
+    margin-bottom: 15px; /* Espacio inferior */
+    color: #542731; /* Color del texto */
+    text-align: center; /* Centrar el texto */
+}
+
+#contact-info p {
+    font-size: 1.5em; /* Aumentar el tamaño de fuente de los párrafos */
+    margin: 10px 0; /* Espaciado vertical entre párrafos */
+    display: flex; /* Usar flex para alinear icono y texto */
+    justify-content: flex-start; /* Alinear a la izquierda */
+    align-items: center; /* Centrar verticalmente */
+    width: 100%; /* Asegurar que ocupe todo el ancho */
+    max-width: 600px; /* Ancho máximo para mantener la alineación */
+}
+
+.contact-detail {
+    color: #333; /* Color del texto de detalles de contacto */
+    font-weight: bold; /* Negrita para destacar */
+    display: flex; /* Usar flex para alinear icono y texto */
+    align-items: center; /* Centrar verticalmente */
+    margin: 0; /* Eliminar margen para que el icono esté pegado al texto */
+}
+
+.contact-detail i {
+    margin-right: 5px; /* Espacio reducido entre el icono y el texto */
+    color: #542731; /* Color del icono */
+}
+
+.copy-button {
+    background-color: #542731; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 5px 10px; /* Espaciado interno */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s; /* Transición para el efecto hover */
+    margin-left: 10px; /* Espacio entre el texto y el botón */
+}
+
+.copy-button:hover {
+    background-color: #777; /* Color de fondo al pasar el mouse */
+}
+
+.copy-button i {
+    color: white; /* Cambiar el color del icono a blanco */
+}
+
+.copy-button.copied {
+    background-color: #ff9999; /* Color rojo menos claro */
+    color: #542731; /* Color del texto */
+}
+.fancy-text {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4em;
+    color: var(--color-text-dark);
+    bottom: 10px;
+    left: 40%;
+    position: absolute;
+}
+.fancy-text-makeup{
+    font-family: 'Great Vibes', cursive;
+    font-size: 4em;
+    color: var(--color-text-dark);
+    bottom: -30px;
+    left: 50%;
+    position: absolute;
+}
+.description {
+    margin-top: 10px;
+    font-size: 1.7em;
+    color: var(--color-text-white);
+}
+.image-section {
+    display: flex;
+    gap: 20px;
+    margin-top: 20%;
+}
+
+.right-section {
+    width: 40%;
+    background: var(--color-sidebar-background);
+    border-radius: 10px;
+    margin-left: 20px;
+}
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+    padding-left: 80px;
+}
+.main-content h1 {
+    font-size: 3em;
+    font-weight: 700;
+    color: #eac7d1;
+    font-family: 'Julius Sans One', sans-serif;
+}
+.main-content p {
+    font-size: 1.2em;
+    font-style: italic;
+    max-width: 500px;
+}
+.button {
+    background: transparent;
+    border: 2px solid var(--color-button-border);
+    color: var(--color-button-border);
+    padding: 12px 24px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+.button:hover {
+    background: var(--color-button-border);
+    color: var(--color-button-hover);
+}
+.glitter {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0;
+    animation: sparkle 2s infinite ease-in-out;
+    z-index: -1;
+}
+@keyframes sparkle {
+    0%, 100% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+/* Estilo para el contenedor de estudios */
+#estudios-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en varias filas */
+    gap: 20px; /* Espacio entre las tarjetas */
+    justify-content: center; /* Centra las tarjetas en el contenedor */
+    margin-top: 3%; /* Margen superior para separar del título */
+}
+
+/* Estilo para las tarjetas de estudios */
+.card-estudios {
+    background: rgba(255, 255, 255, 0.8); /* Fondo más opaco */
+    border: 2px solid #ffffff; /* Borde blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    height: 338px; /* Altura fija */
+    position: relative;
+    backdrop-filter: blur(4.45px);
+    width: calc(33.33% - 20px); /* Ancho de las tarjetas para 3 por fila, restando margen */
+    display: flex;
+    flex-direction: column; /* Permite que el contenido se apile verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    justify-content: center; /* Centra el contenido verticalmente */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+    transition: transform 0.3s; /* Transición para el efecto hover */
+}
+
+@media (max-width: 768px) {
+    .card-estudios {
+        width: calc(50% - 20px); /* Ancho de las tarjetas para 2 por fila en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .card-estudios {
+        width: calc(100% - 20px); /* Ancho completo en pantallas muy pequeñas */
+    }
+}
+
+.card-estudios:hover {
+    transform: scale(1.05); /* Efecto de aumento al pasar el mouse */
+}
+
+.card-estudios h1 {
+    font-size: 1.5em; /* Tamaño de fuente para el título */
+    color: #542731; /* Color del texto */
+    margin: 10px 0; /* Margen superior e inferior */
+    text-align: center; /* Alinear el texto al centro */
+}
+
+.card-estudios h2 {
+    font-size: 1em; /* Tamaño de fuente para el subtítulo */
+    color: #777; /* Color del subtítulo */
+    margin-bottom: 10px; /* Margen inferior */
+}
+
+.card-estudios img {
+    width: 100px; /* Ancho de la imagen */
+    margin-top: 10px; /* Margen superior */
+}
+
+.ver-button {
+    background-color: #542731; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    text-decoration: none; /* Sin subrayado */
+    margin-top: 10px; /* Margen superior */
+    transition: background-color 0.3s; /* Transición para el efecto hover */
+}
+
+.ver-button:hover {
+    background-color: #777; /* Color de fondo al pasar el mouse */
+}
+
+/* Estilos para la nueva sección de información de contacto */
+#contact-info {
+    margin-top: 4%; /* Margen superior del 4% */
+    padding: 40px; /* Aumentar el espaciado interno */
+    background-color: rgba(255, 255, 255, 0.4); /* Fondo más opaco */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    transition: transform 0.3s; /* Transición para el efecto hover */
+    display: flex; /* Usar flex para alinear elementos */
+    flex-direction: column; /* Colocar elementos en columna */
+    align-items: center; /* Centrar horizontalmente */
+}
+
+#contact-info:hover {
+    transform: scale(1.02); /* Efecto de aumento al pasar el mouse */
+}
+
+#contact-info h2 {
+    font-size: 2.5em; /* Aumentar el tamaño de fuente del título */
+    margin-bottom: 15px; /* Espacio inferior */
+    color: #542731; /* Color del texto */
+    text-align: center; /* Centrar el texto */
+}
+
+#contact-info p {
+    font-size: 1.5em; /* Aumentar el tamaño de fuente de los párrafos */
+    margin: 10px 0; /* Espaciado vertical entre párrafos */
+    display: flex; /* Usar flex para alinear icono y texto */
+    justify-content: flex-start; /* Alinear a la izquierda */
+    align-items: center; /* Centrar verticalmente */
+    width: 100%; /* Asegurar que ocupe todo el ancho */
+    max-width: 600px; /* Ancho máximo para mantener la alineación */
+}
+
+.contact-detail {
+    color: #333; /* Color del texto de detalles de contacto */
+    font-weight: bold; /* Negrita para destacar */
+    display: flex; /* Usar flex para alinear icono y texto */
+    align-items: center; /* Centrar verticalmente */
+    margin: 0; /* Eliminar margen para que el icono esté pegado al texto */
+}
+
+.contact-detail i {
+    margin-right: 5px; /* Espacio reducido entre el icono y el texto */
+    color: #542731; /* Color del icono */
+}
+
+.copy-button {
+    background-color: #542731; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 5px 10px; /* Espaciado interno */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s; /* Transición para el efecto hover */
+    margin-left: 10px; /* Espacio entre el texto y el botón */
+}
+
+.copy-button:hover {
+    background-color: #777; /* Color de fondo al pasar el mouse */
+}
+
+.copy-button i {
+    color: white; /* Cambiar el color del icono a blanco */
+}
+
+.copy-button.copied {
+    background-color: #ff9999; /* Color rojo menos claro */
+    color: #542731; /* Color del texto */
+}
+.fancy-text {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4em;
+    color: var(--color-text-dark);
+    bottom: 10px;
+    left: 40%;
+    position: absolute;
 }

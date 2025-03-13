@@ -18,6 +18,12 @@
     --color-button-hover: #a18cd1;
     --color-image-border: rgba(255, 255, 255, 0.5);
     --color-barra-left: #C4B29F;
+    --color-gradient-start: rgba(196, 178, 159, 1);
+    --color-gradient-end: rgba(255, 255, 255, 1);
+    --color-white: #ffffff;
+    --color-black-shadow: rgba(0, 0, 0, 0.5);
+    --color-main-content: #eac7d1;
+    --color-outline: white;
 }
 
 * {
@@ -149,7 +155,7 @@ body {
     position: absolute;
     width: 5px;
     height: 5px;
-    background: white;
+    background: var(--color-white);
     border-radius: 50%;
     opacity: 0;
     animation: sparkle 2s infinite ease-in-out;
@@ -180,7 +186,7 @@ body {
     opacity: 1;
 }
 .image-box:hover {
-    outline: 4px solid white;
+    outline: 4px solid var(--color-white);
     outline-offset: 4px;
     transform: scale(1.05);
 }
@@ -207,8 +213,8 @@ body {
     left: 10px;
     font-size: 2.4em;
     font-family: "Festive", cursive;
-    color: white;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    color: var(--color-white);
+    text-shadow: 2px 2px 5px var(--color-black-shadow);
     z-index: 2;
 }
 
@@ -233,12 +239,12 @@ body {
 }
 .header-right h1 {
     font-size: 4em;
-    color: white;
+    color: var(--color-white);
     line-height: 80%;
     background: linear-gradient(
         90deg,
-        rgba(196, 178, 159, 1) 0%,
-        rgba(255, 255, 255, 1) 100%
+        var(--color-gradient-start) 0%,
+        var(--color-gradient-end) 100%
       );
       background-clip: text;
       -webkit-background-clip: text;
@@ -247,11 +253,11 @@ body {
 .header-right h2 {
     margin-left: 10px;
     font-size: 1.5em;
-    color: white;
+    color: var(--color-white);
     background: linear-gradient(
         90deg,
-        rgba(196, 178, 159, 1) 0%,
-        rgba(255, 255, 255, 1) 100%
+        var(--color-gradient-start) 0%,
+        var(--color-gradient-end) 100%
       );
       background-clip: text;
       -webkit-background-clip: text;
@@ -260,7 +266,7 @@ body {
 .fancy-text-right {
     font-family: 'Great Vibes', cursive;
     font-size: 1.3em;
-    color: #ffffff;
+    color: var(--color-white);
     bottom: -10px;
     left: 51%;
     position: absolute;
@@ -333,7 +339,7 @@ body {
         top: 20px;
         right: 20px;
         font-size: 2em; /* Tamaño del ícono */
-        color: white; /* Cambiar color del ícono a blanco */
+        color: var(--color-white); /* Cambiar color del ícono a blanco */
         cursor: pointer; /* Cambiar cursor */
         z-index: 1000; /* Asegurar que esté por encima del menú */
     }

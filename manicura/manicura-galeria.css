@@ -18,6 +18,12 @@
     --color-button-hover: #a18cd1;
     --color-image-border: rgba(255, 255, 255, 0.5);
     --color-barra-left: #C4B29F;
+    --color-gradient-start: rgba(196, 178, 159, 1);
+    --color-gradient-end: rgba(255, 255, 255, 1);
+    --color-white: #ffffff;
+    --color-black-shadow: rgba(0, 0, 0, 0.5);
+    --color-main-content: #eac7d1;
+    --color-transparent-bg: rgba(255, 255, 255, 0.1);
 }
 
 * {
@@ -102,8 +108,8 @@ body {
     line-height: 80%;
     background: linear-gradient(
         90deg,
-        rgba(196, 178, 159, 1) 0%,
-        rgba(255, 255, 255, 1) 100%
+        var(--color-gradient-start) 0%,
+        var(--color-gradient-end) 100%
       );
       background-clip: text;
       -webkit-background-clip: text;
@@ -115,8 +121,8 @@ body {
     color: var(--color-text-white);
     background: linear-gradient(
         90deg,
-        rgba(196, 178, 159, 1) 0%,
-        rgba(255, 255, 255, 1) 100%
+        var(--color-gradient-start) 0%,
+        var(--color-gradient-end) 100%
       );
       background-clip: text;
       -webkit-background-clip: text;
@@ -191,7 +197,7 @@ body {
     position: absolute;
     width: 5px;
     height: 5px;
-    background: white;
+    background: var(--color-white);
     border-radius: 50%;
     opacity: 0;
     animation: sparkle 2s infinite ease-in-out;
